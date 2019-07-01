@@ -19,19 +19,21 @@ constructor (name) {
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
-
+      // console.log(this.foodLevel)
     }, 1000);
   }
 
   setAttention() {
     setInterval(() => {
       this.attentionLevel--;
+      console.log(this.attentionLevel)
     }, 1000);
   }
 
   setSleep() {
     setInterval(() => {
       this.sleepLevel--;
+      // console.log(this.sleepLevel)
     }, 1000);
   }
 
@@ -69,4 +71,5 @@ play() {
 sleep() {
     this.sleepLevel = 10;
   }
+  // document.getElementById("visibleFeed").innerHTML = this.foodLevel;
 }
