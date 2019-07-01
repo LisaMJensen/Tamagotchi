@@ -23,7 +23,29 @@ console.log(pet);
 console.log(pet.name)
 console.log(pet.foodLevel)
 
-document.getElementById("visibleFeed").innerHTML = this.foodLevel;
+
+  var displayFoodLevel = setInterval(function () {
+      document.getElementById("visibleFeed").innerHTML = pet.foodLevel;
+      if (pet.foodLevel === 0) {
+          clearInterval(displayFoodLevel);
+      }
+      }, 1000);
+
+  var displayAttentionLevel = setInterval(function () {
+      document.getElementById("visibleAttention").innerHTML = pet.attentionLevel;
+      if (pet.attentionLevel === 0) {
+          clearInterval(displayAttentionLevel);
+      }
+      }, 1000);
+
+  var displaySleepLevel = setInterval(function () {
+      document.getElementById("visibleSleep").innerHTML = pet.sleepLevel;
+      if (pet.sleepLevel === 0) {
+          clearInterval(displaySleepLevel);
+      }
+      }, 1000);
+
+// document.getElementById("visibleFeed").innerHTML = pet.foodLevel
 
     $("#feed").click(function() {
       // event.preventDefault();
@@ -42,3 +64,5 @@ document.getElementById("visibleFeed").innerHTML = this.foodLevel;
 
   });
 });
+// setInterval(function) {
+// document.getElementById("visibleFeed").innerHTML = (pet.foodLevel)}, 1000);

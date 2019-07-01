@@ -10,23 +10,23 @@ export class Tamagotchi {
 
 constructor (name) {
     this.name = name;
-    this.foodLevel = 10;
-    this.attentionLevel = 10;
-    this.sleepLevel = 10;
+    this.foodLevel = 11;
+    this.attentionLevel = 11;
+    this.sleepLevel = 11;
   }
   // let pet = new userTamagotchi ("Earl", 10, 10, 10);
 
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
-      // console.log(this.foodLevel)
+      console.log(this.foodLevel)
     }, 1000);
   }
 
   setAttention() {
     setInterval(() => {
       this.attentionLevel--;
-      console.log(this.attentionLevel)
+      // console.log(this.attentionLevel)
     }, 1000);
   }
 
@@ -62,14 +62,14 @@ constructor (name) {
   }
 
  feed() {
-    this.foodLevel = 10;
+    this.foodLevel = 11;
   }
 
 play() {
-    this.attentionLevel = 10;
+    this.attentionLevel = 11;
   }
 sleep() {
-    this.sleepLevel = 10;
+    this.sleepLevel = 11;
   }
   // document.getElementById("visibleFeed").innerHTML = this.foodLevel;
 }
