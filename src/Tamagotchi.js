@@ -19,7 +19,7 @@ constructor (name) {
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
-      console.log(this.foodLevel)
+      // console.log(this.foodLevel)
     }, 1000);
   }
 
