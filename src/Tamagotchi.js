@@ -6,15 +6,15 @@
   // pet.name = "Earl";
 
 //Object
-   class  Tamagotchi {
+export class Tamagotchi {
 
-  Tama(name, hunger, attention, sleep) {
+constructor (name) {
     this.name = name;
     this.foodLevel = 10;
     this.attentionLevel = 10;
     this.sleepLevel = 10;
   }
-  let pet = new Tama("Earl", 10, 10, 10);
+  // let pet = new userTamagotchi ("Earl", 10, 10, 10);
 
   setHunger() {
     setInterval(() => {
@@ -34,39 +34,38 @@
     }, 1000);
   }
 
-didYouStarve() {
-if (this.foodLevel > 0) {
-  return false;
-} else {
-  return true;
-}
-}
+  didYouStarve() {
+    if (this.foodLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-didYouLonely() {
-if (this.attentionLevel > 0) {
-  return false;
-} else {
-  return true;
-}
-}
+  didYouLonely() {
+    if (this.attentionLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-didYouNotSleep() {
-if (this.sleepLevel > 0) {
-  return false;
-} else {
-  return true;
-}
-}
+  didYouNotSleep() {
+    if (this.sleepLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-feed() {
-this.foodLevel = 10;
-}
+ feed() {
+    this.foodLevel = 10;
+  }
 
 play() {
-this.attentionLevel = 10;
-}
-
+    this.attentionLevel = 10;
+  }
 sleep() {
-this.sleepLevel = 10;
-}
-}
+    this.sleepLevel = 10;
+  }
+};
