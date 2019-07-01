@@ -8,50 +8,25 @@ import { Tamagotchi } from './Tamagotchi.js';
 
 
 let pet = new Tamagotchi("Earl");
-// let foodLevel =0;
-// let attentionLevel =0;
-// let sleepLevel =0;
 
-// pet.setHunger() {
-//   setInterval(() => {
-//     this.foodLevel--;
-//   }, 1000);
-// }
-
-// function setAttention() {
-//   setInterval(() => {
-//     this.attentionLevel--;
-//   }, 1000);
-// }
-//
-// function setSleep() {
-//   setInterval(() => {
-//     this.sleepLevel--;
-//   }, 1000);
-// }
-// function feed() {
-//     this.foodLevel = 10;
-//   }
-//
-// function play() {
-//     this.attentionLevel = 10;
-//   }
-//
-// function sleep() {
-//     this.sleepLevel = 10;
-//   }
+pet.setHunger();
 
 //front-end
 $(document).ready(function() {
-// setHunger();
+
+
+
+console.log(pet.didYouStarve());
 
 console.log(pet);
+console.log(pet.name)
+console.log(pet.foodLevel)
 
-    // $("#feed").click(function() {
-    //   // event.preventDefault();
-    //   feed();
-    //   console.log(this.foodLevel);
-    // });
+
+    $("#feed").click(function() {
+      // event.preventDefault();
+      pet.feed();
+    });
     // $("#attention").click(function() {
     //   // event.preventDefault();
     //   play();

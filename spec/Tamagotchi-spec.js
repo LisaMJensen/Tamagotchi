@@ -1,12 +1,31 @@
-import { Triangle } from './../src/triangle.js';
+import { Tamagotchi } from './../src/Tamagotchi.js'
 
-describe('Triangle', function() {
 
-  it('should test whether a Triangle has three sides', function() {
-    var triangle = new Triangle(3,4,5);
-    expect(triangle.side1).toEqual(3);
-    expect(triangle.side2).toEqual(4);
-    expect(triangle.side3).not.toEqual(6);
+describe('Tamagotchi', function() {
+  let testPet = new Tamagotchi("Sue");
+  // let testPet = {
+  //   name: "Sue",
+  //   foodLevel: 10
+  // }
+
+  beforeEach(function() {
+    jasmine.clock().install();
+    testPet.setHunger();
   });
 
-});
+  afterEach(function() {
+    jasmine.clock().uninstall();
+  });
+
+  it('It should have a name and not be starved when made', function() {
+    expect(testPet.name).toEqual("Sue");
+    expect(testPet.foodLevel).toEqual(10)
+  });
+
+  it('should have a food level of 7 after 3001 milliseconds', function() {
+    jasmine.clock().tick(3001);
+    expect(testPet.foodLevel).toEqual(7);
+  });
+
+
+})

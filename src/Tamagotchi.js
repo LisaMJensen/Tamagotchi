@@ -19,6 +19,7 @@ constructor (name) {
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
+
     }, 1000);
   }
 
@@ -68,4 +69,4 @@ play() {
 sleep() {
     this.sleepLevel = 10;
   }
-};
+}
